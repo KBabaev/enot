@@ -1,0 +1,33 @@
+.row {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.textBlock {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    font-weight: 600;
+    margin: 0 20px;
+}
+
+.textBlock > span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+
+.title {
+    font-size: 24px;
+    color: #F4F4F4;
+    margin-bottom: 6px;
+    margin-top: 0;
+}
+
+.description {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+}
