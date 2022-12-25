@@ -23,8 +23,8 @@ export const Main: React.FC = (): JSX.Element => {
       {visibleNews && news && (
         <footer className={css.footer}>
           <div className={css.marquee}>
-            <Link className={css.news} href={news.url} target={'_blank'}>
-              {news.description}
+            <Link className={css.news} href='https://www.google.ru/' target={'_blank'}>
+              {news.joke}
             </Link>
           </div>
         </footer>
