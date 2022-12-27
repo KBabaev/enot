@@ -24,7 +24,7 @@ export const Header: React.FC<PropsType> = ({ changeVisibleNews, visibleNews }):
     <div className={css.header}>
       <Typography variant='h1'>To Do</Typography>
       <SettingsSVG onClick={() => changeModal('open')} />
-      <Modal sx={{ border: 'none' }} open={showModal} onClose={() => changeModal('close')}>
+      <Modal open={showModal} onClose={() => changeModal('close')}>
         <div className={css.contentModal}>
           <div className={css.modalTitle}>Want to see the news?</div>
           <FormControlLabel
