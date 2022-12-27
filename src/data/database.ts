@@ -45,7 +45,7 @@ export const data: TaskType[] = [
   {
     today: false,
     tomorrow: true,
-    tasks: [],
+    tasks,
     dayId: 2,
   },
   {
