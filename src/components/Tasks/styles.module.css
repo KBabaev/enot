@@ -1,36 +1,39 @@
-.content {
-    margin: 30px 0;
-}
-
 .todayTitle {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding-left: 20px;
-    margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 20px;
+  margin-bottom: 16px;
 }
 
 .tasks {
-    display: flex;
-    flex-direction: column;
-    padding: 16px 18px;
-    background: #262626;
-    box-shadow: 16px 16px 20px rgba(0, 0, 0, 0.15), -8px -8px 20px rgba(255, 255, 255, 0.05);
-    border-radius: 40px;
-    margin-bottom: 32px;
-    gap: 16px;
-}
-
-.futureTitle {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 18px;
+  background: #262626;
+  box-shadow: 16px 16px 20px rgba(0, 0, 0, 0.15), -8px -8px 20px rgba(255, 255, 255, 0.05);
+  border-radius: 40px;
+  margin-bottom: 32px;
+  gap: 16px;
 }
 
 .otherTasks {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 18px;
+  gap: 16px;
+}
+
+.futureTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.addSvg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

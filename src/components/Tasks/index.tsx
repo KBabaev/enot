@@ -1,6 +1,6 @@
 import React from 'react'
 import { TodayTask } from './TodayTask'
-import { OtherTask } from './OtherTask'
+import { OtherTask, TaskInfoType } from './OtherTask'
 import { AppContext } from '../../index'
 import { TaskType } from '../../data/database'
 import { useLocalStorage } from '../../utils'
@@ -22,13 +22,48 @@ export const Tasks: React.FC = (): JSX.Element => {
     })
   }
 
+  const addNewTask = (dayId: number, taskId: number, taskInfo: TaskInfoType): void => {
+    setTasksData((prev) => {
+      const copyData = [...prev]
+      const findTask = copyData.find((item) => item.dayId === dayId)
+      if (findTask) {
+        findTask.tasks.push({ ...taskInfo, id: taskId + 1, isDone: false })
+      }
+      return copyData
+    })
+  }
+
+  const deleteTaskRow = (dayId: number, taskId: number): void => {
+    setTasksData((prev) => {
+      const copyData = [...prev]
+      const findTask = copyData.find((item) => item.dayId === dayId)
+      if (findTask) {
+        findTask.tasks = findTask.tasks.filter((item) => item.id !== taskId)
+      }
+      return copyData
+    })
+  }
+
   return (
     <div className={css.content}>
-      {tasksData.map((item) => {
+      {tasksData.map((item, index) => {
         return item.today ? (
-          <TodayTask {...item} key={item.dayId} changeTaskStatus={changeTaskStatus} />
+          <TodayTask
+            {...item}
+            key={item.dayId}
+            changeTaskStatus={changeTaskStatus}
+            deleteTaskRow={deleteTaskRow}
+            addNewTask={addNewTask}
+          />
         ) : (
-          <OtherTask {...item} key={item.dayId} changeTaskStatus={changeTaskStatus} />
+          <OtherTask
+            {...item}
+            key={item.dayId}
+            index={index}
+            changeTaskStatus={changeTaskStatus}
+            addNewTask={addNewTask}
+            deleteTaskRow={deleteTaskRow}
+          />
         )
       })}
     </div>

@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { FormControlLabel, Modal, Typography } from '@mui/material'
 import { ReactComponent as SettingsSVG } from '../../assets/icons/Settings.svg'
-import css from './styles.module.css'
 import { SwitchComponent } from '../Switch'
+import css from './styles.module.css'
 
 interface PropsType {
   changeVisibleNews: (value: boolean) => void

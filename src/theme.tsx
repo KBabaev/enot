@@ -6,7 +6,7 @@ theme.typography.fontFamily = 'Actor, sans-serif'
 
 theme.typography.h1 = {
   fontSize: '36px',
-  fontWeight: '400',
+  fontWeight: '700',
 }
 
 theme.typography.h2 = {

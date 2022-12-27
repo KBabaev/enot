@@ -6,7 +6,6 @@ export interface TaskRowType {
 }
 
 export interface TaskType {
-  date: string
   today: boolean
   tomorrow: boolean
   tasks: TaskRowType[]
@@ -30,8 +29,7 @@ const tasks: TaskRowType[] = [
   },
   {
     title: 'Fix Dad’s iPad',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    description: 'Lorem inp sit',
     isDone: true,
     id: 3,
   },
@@ -39,45 +37,39 @@ const tasks: TaskRowType[] = [
 
 export const data: TaskType[] = [
   {
-    date: '24/12',
     today: true,
     tomorrow: false,
     tasks,
     dayId: 1,
   },
   {
-    date: '25/12',
     today: false,
     tomorrow: true,
-    tasks,
+    tasks: [],
     dayId: 2,
   },
   {
-    date: '26/12',
     today: false,
     tomorrow: false,
-    tasks,
+    tasks: [],
     dayId: 3,
   },
   {
-    date: '27/12',
     today: false,
     tomorrow: false,
-    tasks,
+    tasks: [],
     dayId: 4,
   },
   {
-    date: '28/12',
     today: false,
     tomorrow: false,
-    tasks,
+    tasks: [],
     dayId: 5,
   },
   {
-    date: '29/12',
     today: false,
     tomorrow: false,
-    tasks,
+    tasks: [],
     dayId: 6,
   },
 ]

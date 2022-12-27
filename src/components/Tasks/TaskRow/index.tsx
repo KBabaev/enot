@@ -4,9 +4,11 @@ import { FormControlLabel } from '@mui/material'
 import { SwitchComponent } from '../../Switch'
 import { Pointer } from '../../Pointer'
 import css from './styles.module.css'
+import { Delete } from '@mui/icons-material'
 
 interface PropsType extends TaskRowType {
   changeTaskStatus: (dayId: number, id: number, status: boolean) => void
+  deleteTaskRow: (dayId: number, id: number) => void
   dayId: number
 }
 
@@ -17,6 +19,7 @@ export const TaskRow: React.FC<PropsType> = ({
   changeTaskStatus,
   dayId,
   id,
+  deleteTaskRow,
 }): JSX.Element => {
   const [statusTask, setStatusTask] = useState<boolean>(isDone)
 
@@ -24,6 +27,10 @@ export const TaskRow: React.FC<PropsType> = ({
     const { checked } = e.target
     setStatusTask(checked)
     changeTaskStatus(dayId, id, checked)
+  }
+
+  const removeTask = (): void => {
+    deleteTaskRow(dayId, id)
   }
 
   useEffect((): void => {
@@ -42,10 +49,13 @@ export const TaskRow: React.FC<PropsType> = ({
         </span>
         <span className={css.description}>{description}</span>
       </div>
-      <FormControlLabel
-        label=''
-        control={<SwitchComponent checked={statusTask} onChange={onChange} />}
-      />
+      <div className={css.switch}>
+        <FormControlLabel
+          label=''
+          control={<SwitchComponent checked={statusTask} onChange={onChange} />}
+        />
+        <FormControlLabel label='' control={<Delete onClick={removeTask} />} />
+      </div>
     </div>
   )
 }

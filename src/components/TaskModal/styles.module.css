@@ -1,0 +1,10 @@
+.newTaskWrapper {
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.newTaskContent {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}

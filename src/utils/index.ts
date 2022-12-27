@@ -26,3 +26,12 @@ export const useLocalStorage = <S>(
 
   return [state, setState]
 }
+
+export const getTaskDate = (taskCount: number): string => {
+  const today = new Date()
+  today.setDate(today.getDate() + taskCount)
+  const day = `${today.getDate()}`
+  const month = `${today.getMonth() + 1}`
+
+  return `${day}/${month}`
+}

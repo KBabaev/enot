@@ -1,25 +1,19 @@
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 20px;
-}
-
-.title {
-    font-family: 'Actor', sans-serif;
-    font-weight: 400;
-    font-size: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px 20px;
 }
 
 .contentModal {
-    background-color: #F4F4F4;
-    color: #262626;
-    font-weight: 600;
-    font-size: 20px;
-    text-align: center;
-    padding: 32px;
+  background-color: #f4f4f4;
+  color: #262626;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+  padding: 32px;
 }
 
 .modalTitle {
-    margin-bottom: 16px;
+  margin-bottom: 16px;
 }

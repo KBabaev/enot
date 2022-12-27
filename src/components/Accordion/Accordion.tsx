@@ -45,5 +45,6 @@ export const AccordionDetails = styled(MuiAccordionDetails)(() => ({
   backgroundColor: '#262626',
   color: '#F4F4F4',
   margin: '0',
+  padding: '0',
   border: 'none',
 }))
